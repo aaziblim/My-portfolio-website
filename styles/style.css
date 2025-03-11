@@ -96,3 +96,112 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--clr-rose);
   outline: 1px solid var(--clr-rose);
 }
+
+/* counter animation */
+
+.wrapper {
+  margin-top: -20px;
+}
+.wrapper .title {
+  font-size: 65px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.wrapper .description {
+  max-width: 60ch;
+  text-align: center;
+  font-size: var(--size-2xl);
+  color: var(--clr-slate600);
+  margin: 1rem auto;
+}
+.wrapper p {
+  text-align: justify;
+  padding-bottom: 20px;
+}
+.counter-up {
+  background: url("images/bg-2.jpeg") no-repeat;
+  min-height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.counter-up::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--clr-dark);
+}
+.counter-up .content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.counter-up .content .box {
+  border: 2px solid var(--clr-slate400);
+  width: 180px;
+  height: 180px;
+  border-radius: 50px;
+  margin-top: -20px;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.counter-up .content .box:hover {
+  transform: scale(1.1);
+}
+.content .box .icon {
+  font-size: 40px;
+  color: var(--clr-rose);
+  margin-bottom: 5px;
+}
+
+.content .box .counter {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--clr-light);
+}
+.content .box .text {
+  font-weight: 400;
+  color: var(--clr-slate400);
+}
+@media screen and (max-width: 1036px) {
+  .counter-up {
+    padding: 50px 50px 0 50px;
+  }
+  .counter-up .content .box {
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .counter-up .content .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: 20px;
+  }
+  .counter-up {
+    padding: 30px 20px 0 20px;
+  }
+}

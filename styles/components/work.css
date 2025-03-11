@@ -75,6 +75,10 @@
   margin: 2rem auto;
 }
 
+.work_img{
+  border-radius: 20px;
+}
+
 /* xs */
 @media (min-width: 475px) {
   .work_title {
