@@ -61,7 +61,7 @@
   object-fit: cover;
   transition: all 0.3s ease;
   /* Gradient border with animation */
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   background: linear-gradient(45deg, var(--clr-indigo), #8b5cf6, #ec4899) border-box;
   position: relative;
   overflow: hidden;
