@@ -1,10 +1,10 @@
 :root {
-  --clr-dark: #070a13;
+  --clr-dark: #141414;
   --clr-light: #f1f5f9;
   --clr-slate400: #94a3b8;
   --clr-slate600: #475569;
   --clr-slate800: #1e293b;
-  --clr-rose: #e11d48;
+  --clr-rose: #ffff40;
   --clr-indigo: #4f46e5;
 
   /*  rose rgb(225, 29, 72)  */
@@ -42,6 +42,7 @@ html {
   --clr-slate400: #1e293b;
   --clr-slate600: #1e293b;
   --clr-slate800: #1e293b;
+  --clr-rose: #e0b909;
 }
 
 body {

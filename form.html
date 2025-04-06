@@ -1,113 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-    <link rel="icon" type="image/svg+xml" href="/contact.svg" />
-    <link rel="stylesheet" href="../styles/form.css" />
-  </head>
-  <body class="form_body">
-    <!-- begins here -->
-    <div class="new_home_web">
-      <div class="responsive-container-block big-container">
-        <!-- <img
-          class="imgBG"
-          src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw65.png"
-        /> -->
-        <div class="responsive-container-block textContainer">
-          <div class="topHead">
-            <p class="text-blk heading">
-              Get in
-              <span class="orangeText"> touch </span>
-            </p>
-            <div class="orangeLine" id="w-c-s-bgc_p-2-dm-id"></div>
-          </div>
-          <p class="text-blk subHeading">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna al iqua.
-          </p>
-        </div>
-        <div class="responsive-container-block container">
-          <div
-            class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line"
-            id="i69b"
-          >
-            <form action="" method="POST" class="form-box" autocomplete="off">
-              <div class="container-block form-wrapper">
-                <div class="responsive-container-block">
-                  <div class="left4">
-                    <div
-                      class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6"
-                      id="i10mt-2"
-                    >
-                      <input
-                        class="input"
-                        id="ijowk-2"
-                        name="firstname"
-                        placeholder="First Name"
-                      />
-                    </div>
-                    <div
-                      class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12"
-                    >
-                      <input
-                        class="input"
-                        id="indfi-2"
-                        name="lastname"
-                        placeholder="Last Name"
-                      />
-                    </div>
-                    <div
-                      class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12"
-                    >
-                      <input
-                        class="input"
-                        id="ipmgh-2"
-                        name="email"
-                        placeholder="Email Address"
-                        required
-                      />
-                    </div>
-                    <div
-                      class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 lastPhone"
-                    >
-                      <input
-                        class="input"
-                        id="imgis-2"
-                        name="phonenumber"
-                        placeholder="Phone Number"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
-                    id="i634i-2"
-                  >
-                    <textarea
-                      class="textinput"
-                      id="i5vyy-2"
-                      name="message"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-                </div>
-                <!-- <a class="send" href="#" id="w-c-s-bgc_p-1-dm-id"> Send </a> -->
-                <button
-                  name="submit"
-                  class="send"
-                  type="submit"
-                  id="w-c-s-bgc_p-1-dm-id"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <link
+      class="title_icon"
+      rel="icon"
+      type="image/svg+xml"
+      href="/chat.png"
+    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0a0a0a] text-white min-h-screen flex items-center justify-center p-6">
+
+  <form
+    action="https://formspree.io/f/mnnpopjj"
+    method="POST"
+    class="w-full max-w-2xl bg-[#111111] p-10 rounded-3xl shadow-2xl border border-gray-800 space-y-8"
+  >
+    <h2 class="text-4xl font-extrabold text-center text-white mb-6">📬 Let's Work Together</h2>
+
+    <!-- Name & Email -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold text-gray-300 mb-2">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Enter your full name"
+          class="w-full px-4 py-3 rounded-xl bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-300 mb-2">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Enter your email address"
+          class="w-full px-4 py-3 rounded-xl bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+        />
+      </div>
+    </div>
+
+    <!-- Subject -->
+    <div>
+      <label class="block text-sm font-semibold text-gray-300 mb-2">Subject</label>
+      <input
+        type="text"
+        name="subject"
+        placeholder="Let’s build something amazing"
+        class="w-full px-4 py-3 rounded-xl bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+      />
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label class="block text-sm font-semibold text-gray-300 mb-2">Message</label>
+      <textarea
+        name="message"
+        rows="5"
+        required
+        placeholder="Tell me more about what you’re looking for..."
+        class="w-full px-4 py-3 rounded-xl bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none"
+      ></textarea>
+    </div>
+
+    <!-- Budget & Project Type -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold text-gray-300 mb-2">Budget Range</label>
+        <select
+          name="budget"
+          class="w-full px-4 py-3 rounded-xl bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+        >
+          <option value="" disabled selected>Select budget</option>
+          <option value="under-500">$0 - $500</option>
+          <option value="500-2000">$500 - $2000</option>
+          <option value="2000-plus">$2000+</option>
+          <option value="Not sure">Undecided</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-300 mb-2">Type of Project</label>
+        <div class="flex flex-wrap gap-3">
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" name="type" value="website" class="accent-yellow-400" />
+            <span>Website</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" name="type" value="webapp" class="accent-yellow-400" />
+            <span>Web App</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" name="type" value="api" class="accent-yellow-400" />
+            <span>API</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="checkbox" name="type" value="consultation" class="accent-yellow-400" />
+            <span>Consultation</span>
+          </label>
         </div>
       </div>
     </div>
-  </body>
+
+    <!-- Submit -->
+    <div class="text-center">
+      <button
+        type="submit"
+        class="mt-6 px-8 py-4 bg-yellow-400 text-black font-bold rounded-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition duration-300 ring-2 ring-yellow-400/30"
+      >
+        ✉️ Send Message
+      </button>
+    </div>
+  </form>
+
+</body>
 </html>
