@@ -1,3 +1,4 @@
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -13,18 +14,17 @@
 }
 
 .header__bars {
-  display: block;
   color: var(--clr-light);
   width: var(--size-2xl);
   height: var(--size-2xl);
+  display: block;
 }
+
 /* xs */
-/* @media (min-width: 475px) {
-  } */
+/* @media (min-width: 475px) {} */
 
 /* sm */
-/* @media (min-width: 640px) {
-  } */
+/* @media (min-width: 640px) {} */
 
 /* md */
 @media (min-width: 768px) {
@@ -38,20 +38,38 @@
 
   .header__link {
     font-size: var(--size-xs);
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
+    font-weight: 600;
     color: var(--clr-slate600);
     letter-spacing: -0.05em;
-    transition: color 0.3s;
+    position: relative;
+    transition: all 0.3s ease;
   }
-
+  
+  .header__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--clr-rose);
+    transition: width 0.3s ease;
+  }
+  
   .header__link:hover {
     color: var(--clr-rose);
-    border-bottom: 1px solid var(--clr-rose);
-    transition: 0.3s;
+    transform: scale(1.05);
   }
+  
+  .header__link:hover::after {
+    width: 100%;
+  }
+  
 
   .header__line {
-    border: 1px solid var(--clr-slate800);
+    border: 1px solid var(--clr-slate400);
     padding-top: 1.5em;
   }
 
@@ -65,6 +83,7 @@
   .header__resume {
     font-size: var(--size-xs);
   }
+
   .header__bars {
     display: none;
   }
@@ -73,8 +92,7 @@
 /* lg */
 @media (min-width: 1024px) {
   .header__link {
-    font-size: var(--size-lg);
-    font-weight: 600;
+    font-size: var(--size-xl);
   }
 
   .header__sun {
@@ -83,21 +101,12 @@
   }
 
   .header__resume {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
   }
 }
 
 /* xl */
-@media (min-width: 1280px) {
-  .header__menu {
-    font-size: var(--size-xl);
-  }
-  .header__link {
-    font-size: var(--size-xl);
-    font-weight: 600;
-  }
-}
+/* @media (min-width: 1280px) {} */
 
 /* 2xl */
-/* @media (min-width: 1536px) {
-  } */
+/* @media (min-width: 1536px) {} */

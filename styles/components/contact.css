@@ -14,8 +14,11 @@
 }
 .contact_description {
   font-size: var(--size-sm);
-  color: var(--clr-slate600);
+  color: var(--clr-slate400);
   text-transform: capitalize;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
   max-width: 60ch;
 }
 

@@ -33,6 +33,29 @@
   line-height: calc(1em + 0.5rem);
 }
 
+h2 {
+  font-size: var(--size-4xl); /* Or adjust to your scale */
+  font-weight: 700;
+  color: var(--clr-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Optional underline or accent line for flair */
+h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  background-color: var(--clr-indigo);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -76,7 +99,7 @@ a {
 }
 
 strong {
-  color: var(--clr-indigo);
+  color: var(--clr-slate400);
 }
 
 span {
@@ -152,17 +175,21 @@ body::-webkit-scrollbar-thumb {
   gap: 2rem;
 }
 .counter-up .content .box {
-  border: 2px solid var(--clr-slate400);
+  border: 2px solid var(--clr-rose);
   width: 180px;
   height: 180px;
   border-radius: 50px;
-  margin-top: -20px;
+  background-color: #1d1d16;
+  margin: 0 10px;
   padding-top: 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 10px;
+  padding: 2px;
+  box-shadow: 0 0.5px 0.5px rgba(225, 205, 29, 0.5),
+  0 1px 1px rgba(225, 222, 29, 0.5), 0 0 20px -5px var(--clr-rose);
+transition: 0.3s ease;
   transition: 0.3s;
 }
 
@@ -178,11 +205,11 @@ body::-webkit-scrollbar-thumb {
 .content .box .counter {
   font-size: 50px;
   font-weight: 700;
-  color: var(--clr-light);
+  color: #94a3b8;
 }
 .content .box .text {
   font-weight: 400;
-  color: var(--clr-slate400);
+  color: #94a3b8;
 }
 @media screen and (max-width: 1036px) {
   .counter-up {
