@@ -15,18 +15,53 @@
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   padding: 1rem;
+  border-radius: 0 0 20px 20px;
+  margin: 0 10px;
+  width: calc(100% - 20px);
+  animation: slideDown 0.3s ease-out;
 }
 
 .header nav {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .header__menu {
   display: none;
+  margin-right: auto;
+}
+
+.header__resume {
+  margin-left: auto;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes linkSlide {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header.scrolled .header__link {
+  animation: linkSlide 0.3s ease-out forwards;
+  animation-delay: calc(var(--link-index) * 0.1s);
 }
 
 .header__bars {
