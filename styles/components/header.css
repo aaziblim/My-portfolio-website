@@ -9,7 +9,6 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  background: rgba(16, 16, 29, 0.95);
 }
 
 @media (min-width: 768px) {
