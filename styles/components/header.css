@@ -9,14 +9,13 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: all 0.3s ease;
-  background: rgba(16, 16, 29, 0.95);
 }
 
 @media (min-width: 768px) {
   .header {
     justify-content: center;
     background: transparent;
+    transition: all 0.3s ease;
   }
 
   .header.scrolled {
