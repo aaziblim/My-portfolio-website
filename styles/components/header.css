@@ -50,20 +50,33 @@
 }
 
 .header {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: top;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: top center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .header.scrolled {
-  transform: scale(0.98);
+  transform: translateX(-50%) translateY(8px);
+  width: max-content;
+  padding: 0.75rem 2.5rem;
 }
 
 .header__link {
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header.scrolled .header__link:hover {
   transform: scale(1.05);
+  color: var(--clr-rose);
+}
+
+.header nav {
+  transition: all 0.3s ease;
+}
+
+.header.scrolled nav {
+  transform: scale(0.98);
 }
 
 .header__bars {
