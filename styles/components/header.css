@@ -1,12 +1,28 @@
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  position: relative;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
   z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+
+.header nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__menu {
