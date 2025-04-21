@@ -28,15 +28,28 @@ window.addEventListener('scroll', () => {
   }
 });
 
-src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js";
-src =
-  "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js";
-src =
-  "https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js";
+// Counter animation
+const counters = document.querySelectorAll('.counter');
 
-$(document).ready(function () {
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1200,
-  });
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    const count = parseInt(counter.innerText);
+    const increment = target / 100;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      updateCount();
+    }
+  }, { threshold: 0.5 });
+
+  observer.observe(counter);
 });
