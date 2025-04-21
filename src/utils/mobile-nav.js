@@ -1,19 +1,14 @@
 const mobileNav = () => {
   const headerBtn = document.querySelector(".header__bars");
   const mobileNav = document.querySelector(".mobile-nav");
-  const mobileLinks = document.querySelectorAll(".mobile-nav_link");
+  const mobileLinks = document.querySelectorAll(".mobile-nav__link");
   let isMobileNavOpen = false;
 
   const toggleMobileNav = () => {
     isMobileNavOpen = !isMobileNavOpen;
-    if (isMobileNavOpen) {
-      mobileNav.style.display = "flex";
-      document.body.style.overflowY = "hidden";
-      mobileNav.style.position = "fixed";
-    } else {
-      mobileNav.style.display = "none";
-      document.body.style.overflowY = "auto";
-    }
+    mobileNav.style.display = isMobileNavOpen ? "flex" : "none";
+    document.body.style.overflowY = isMobileNavOpen ? "hidden" : "auto";
+    mobileNav.style.position = isMobileNavOpen ? "fixed" : "absolute";
   };
 
   // Ensure the button works even after scrolling
