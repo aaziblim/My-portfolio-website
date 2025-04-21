@@ -12,22 +12,30 @@
 }
 
 .header.scrolled {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 1rem;
-  border-radius: 0 0 20px 20px;
-  margin: 0 10px;
-  width: calc(100% - 20px);
+  background: rgba(16, 16, 29, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  margin: 1rem 2rem;
+  width: calc(100% - 4rem);
   animation: slideDown 0.3s ease-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .header nav {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
 }
 
 .header__menu {
