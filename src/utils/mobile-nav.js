@@ -25,9 +25,7 @@ const mobileNav = () => {
 
   mobileLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      isMobileNavOpen = false;
-      mobileNav.style.display = "none";
-      document.body.style.overflowY = "auto";
+      toggleMobileNav(); // Use the existing toggle function
     });
   });
 };
