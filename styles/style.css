@@ -233,3 +233,21 @@ transition: 0.3s ease;
     padding: 30px 20px 0 20px;
   }
 }
+
+/* Prevent layout shift during counting */
+.counter {
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+  font-variant-numeric: tabular-nums; /* Better number alignment */
+}
+
+/* If using Font Awesome */
+.icon {
+  margin-bottom: 10px;
+}
+
+/* Smooth AOS transitions */
+[data-aos] {
+  transition-property: transform, opacity;
+}
