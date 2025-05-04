@@ -1,4 +1,5 @@
 .work {
+  position: relative;
   text-align: center;
 }
 
@@ -41,10 +42,6 @@
   position: relative;
 }
 
-.work_image-wrapper:hover::after {
-  background-color: rgba(79, 70, 229, 0.3);
-}
-
 .work_project:not(:last-child) {
   margin-bottom: 5rem;
 }
@@ -63,15 +60,21 @@
 
 .work_project-btn {
   font-size: var(--size-sm);
+  margin: 1rem auto;  
 }
 
 .work_project-subtitle {
+  margin: 1rem auto;
   display: none;
 }
 
 .work_hr {
-  border-color: var(--clr-slate400);
+  border-color: var(--clr-rose);
   margin: 2rem auto;
+  background: linear-gradient(to left, 
+            rgba(255, 218, 68, 0) 0%,
+            rgba(255, 218, 68, 0.8) 50%,
+            rgba(255, 218, 68, 0) 100%);
 }
 
 .work_img{
@@ -110,6 +113,7 @@
 /* sm */
 @media (min-width: 640px) {
   .work_container {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -120,6 +124,10 @@
       "image5 content5"
       "content6 image6";
     place-items: center;
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .work_image1 {
@@ -171,19 +179,19 @@
   }
 
   .work_project {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 
   .work_project-title {
     display: none;
   }
   .work_project-description1 {
-    font-size: var(--size-xs);
+    font-size: var(--size-sm);
     margin: 1em 0;
   }
 
   .work_project-description2 {
-    font-size: var(--size-xs);
+    font-size: var(--size-sm);
     margin-bottom: 1em;
   }
   .work_project-btn {
@@ -276,4 +284,183 @@
   .work_container {
     width: 70%;
   }
+}
+
+
+
+
+.work_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  align-items: center;
+}
+
+/* Two-column layout for desktop */
+@media (min-width: 768px) {
+  .work_item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  /* Alternate project layout (reverse every other project) */
+  .work_item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.work_image-wrapper {
+  flex: 1;
+  max-width: 50%;
+}
+
+.work_image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Content section */
+.work_project {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.work_project-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--clr-light);
+}
+
+.work_project-description1,
+.work_project-description2 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clr-slate400);
+  margin-bottom: 1rem;
+}
+
+.work_project-btn {
+  align-self: start;
+  background-color: var(--clr-rose);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.work_project-btn:hover {
+  background-color: var(--clr-rose);
+}
+
+
+
+
+ /* Glowing Line Styles */
+ .vertical-line {
+  position: absolute;
+  left:-20px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+            rgba(255, 218, 68, 0) 0%,
+            rgba(255, 218, 68, 0.8) 50%,
+            rgba(255, 218, 68, 0) 100%);
+  z-index: 1;
+}
+
+.glowing-dot {
+  position: absolute;
+  left: -20px;
+  top: 300px; /* Adjust based on where you want it */
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr-accent);
+  border-radius: 50%;
+  transform: translateX(-4px);
+  box-shadow: 0 0 15px 5px rgba(255, 218, 68, 0.5);
+  z-index: 2;
+  
+}
+.dot-top {
+  top: 300px;
+}
+
+.dot-middle {
+  top: 1200px;
+}
+
+.dot-bottom {
+  top: 2100px;
+}
+
+
+
+.bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.angled-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, 
+            rgba(255, 218, 68, 0.8) 0%,
+            rgba(255, 218, 68, 0.1) 100%);
+  transform-origin: left bottom;
+  transform: rotate(-5deg) translateY(50px);
+}
+
+.angled-line:nth-child(2) {
+  transform: rotate(-3deg) translateY(100px);
+  opacity: 0.6;
+}
+
+.angled-line:nth-child(3) {
+  transform: rotate(-1deg) translateY(150px);
+  opacity: 0.3;
+}
+
+
+.horizontal-line {
+  position: absolute;
+  top: 300px; /* same as the glowing-dot or where you want it to start */
+  left: 40px; /* match the vertical line's left */
+  width: 150px; /* change as needed */
+  height: 2px;
+  background: linear-gradient(to right, 
+    rgba(255, 218, 68, 0.8), 
+    rgba(255, 218, 68, 0.1));
+  box-shadow: 0 0 10px rgba(255, 218, 68, 0.5);
+  z-index: 1;
+}
+.horizontal-end-dot {
+  position: absolute;
+  top: 296px; /* same top as horizontal-line - half of height */
+  left: 190px; /* left + width of horizontal-line (40 + 150) */
+  width: 10px;
+  height: 10px;
+  background-color: #ffda44;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 4px rgba(255, 218, 68, 0.5);
+  z-index: 2;
 }

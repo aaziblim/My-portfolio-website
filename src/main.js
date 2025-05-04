@@ -31,61 +31,42 @@ window.addEventListener('scroll', () => {
 
 
 // Counter animation
-
-// Counter animation with Intersection Observer
-document.addEventListener('DOMContentLoaded', function() {
-  // Check if counters exist
-  const counters = document.querySelectorAll('.counter');
-  if (counters.length === 0) return;
-
-  // Track animation state
-  let hasAnimated = false;
-
-  // Create single Intersection Observer
+document.addEventListener('DOMContentLoaded', () => {
+  // IntersectionObserver to trigger counter animation when visible
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-        animateCounters();
-        observer.disconnect(); // Stop observing after triggering
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('.counter');
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 2000; // milliseconds
+          
+          let current = 0;
+          const increment = Math.ceil(target / 100);
+          
+          const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+              counter.textContent = current;
+              setTimeout(updateCounter, duration / 100);
+            } else {
+              counter.textContent = target;
+              
+              // Animate the progress bar when counter completes
+              const card = counter.closest('.stat-card');
+              const progressBar = card.querySelector('.stat-progress');
+              progressBar.style.width = '100%';
+            }
+          };
+          
+          updateCounter();
+        });
+        
+        observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.7, // Trigger when 70% visible
-    rootMargin: '0px 0px -100px 0px' // Adjust trigger point
-  });
-
-  // Observe the counter section
-  const counterSection = document.querySelector('.counter-section');
-  if (counterSection) {
-    observer.observe(counterSection);
-  }
-
-  // Animation function
-  function animateCounters() {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 2000; // 2 seconds
-      const startTime = performance.now();
-      
-      const updateCounter = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const value = Math.floor(progress * target);
-        
-        counter.textContent = value;
-        
-        if (progress < 1) {
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.textContent = target; // Ensure final value is exact
-        }
-      };
-      
-      requestAnimationFrame(updateCounter);
-    });
-  }
+  }, { threshold: 0.1 });
+  
+  // Observe the stats grid
+  observer.observe(document.querySelector('.stats-grid'));
 });
-
-console.log('Counters found:', document.querySelectorAll('.counter').length);
-console.log('Section found:', !!document.querySelector('.counter-section'));

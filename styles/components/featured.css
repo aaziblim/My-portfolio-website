@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 2rem;
 }
 .featured_info-container div {
   flex: 1;
