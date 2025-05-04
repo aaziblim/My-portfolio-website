@@ -12,6 +12,12 @@
 
 }
 
+.header__bars {
+  color: var(--clr-rose);
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+  display: block;
+}
 
 @media (min-width: 768px) {
   .header {
@@ -95,7 +101,7 @@
 }
 
 .header__bars {
-  color: var(--clr-light);
+  color: var(--clr-rose);
   width: var(--size-2xl);
   height: var(--size-2xl);
   display: block;
