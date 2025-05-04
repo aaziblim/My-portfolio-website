@@ -122,6 +122,25 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid var(--clr-rose);
 }
 
+@media (max-width: 639px) {
+  .flex, .work_item, .nav, .footer, .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn, .button, a.button {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+
 /* counter animation */
 
 .achievements-container {
