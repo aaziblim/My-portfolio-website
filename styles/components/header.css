@@ -14,6 +14,7 @@
 
 .header__bars {
   color: var(--clr-rose);
+  background-color: var(--clr-dark);
   width: var(--size-2xl);
   height: var(--size-2xl);
   display: block;

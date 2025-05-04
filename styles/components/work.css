@@ -473,7 +473,7 @@
 
   .work_image-wrapper,
   .work_project {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .work_project {

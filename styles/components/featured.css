@@ -212,3 +212,11 @@
 /* 2xl */
 /* @media (min-width: 1536px) {
   } */
+
+
+
+  @media (max-width: 639px) {
+.featured_image-wrapper{
+  max-width: 93%;
+}
+  }
