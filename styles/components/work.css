@@ -39,7 +39,9 @@
 }
 
 .work_image-wrapper {
-  position: absolute;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .work_project:not(:last-child) {
