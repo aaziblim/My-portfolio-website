@@ -39,7 +39,7 @@
 }
 
 .work_image-wrapper {
-  position: relative;
+  position: absolute;
 }
 
 .work_project:not(:last-child) {
