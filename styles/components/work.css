@@ -278,15 +278,15 @@
   }
 
   .work_container {
-    width: 80%;
-    margin: 0 auto;
+    width: 50%;
+    margin: 100px auto;
   }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
   .work_container {
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -310,7 +310,6 @@
     align-items: stretch;
   }
 
-  /* Alternate project layout (reverse every other project) */
   .work_item:nth-child(even) {
     flex-direction: row-reverse;
   }
@@ -402,11 +401,11 @@
 }
 
 .dot-middle {
-  top: 1200px;
+  top: 1000px;
 }
 
 .dot-bottom {
-  top: 2100px;
+  top: 1700px;
 }
 
 
@@ -459,8 +458,8 @@
 }
 .horizontal-end-dot {
   position: absolute;
-  top: 296px; /* same top as horizontal-line - half of height */
-  left: 190px; /* left + width of horizontal-line (40 + 150) */
+  top: 296px; 
+  left: 190px; 
   width: 10px;
   height: 10px;
   background-color: #ffda44;
