@@ -4,7 +4,7 @@
   --clr-slate400: #94a3b8;
   --clr-slate600: #475569;
   --clr-slate800: #1e293b;
-  --clr-rose: #ffff40;
+  --clr-rose: #a3e536;
   --clr-indigo: #4f46e5;
 
   /*  rose rgb(225, 29, 72)  */
@@ -55,7 +55,6 @@ h2::after {
   margin-top: 0.5rem;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -66,7 +65,6 @@ html {
   --clr-slate600: #1e293b;
   --clr-slate800: #1e293b;
   --clr-rose: #e0b909;
-  
 }
 
 body {
@@ -123,7 +121,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 639px) {
-  .flex, .work_item, .nav, .footer, .section {
+  .flex,
+  .work_item,
+  .nav,
+  .footer,
+  .section {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -134,19 +136,21 @@ body::-webkit-scrollbar-thumb {
     height: auto;
   }
 
-  .btn, .button, a.button {
+  .btn,
+  .button,
+  a.button {
     display: inline-block;
     margin: 0 auto;
   }
 }
-
 
 /* counter animation */
 
 .achievements-container {
   padding: 80px 24px;
   color: white;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 }
 
 /* Header styles */
@@ -238,12 +242,12 @@ body::-webkit-scrollbar-thumb {
   .achievements-title {
     font-size: 36px;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
-  
+
   .stat-number {
     font-size: 48px;
   }
@@ -253,15 +257,15 @@ body::-webkit-scrollbar-thumb {
   .achievements-container {
     padding: 60px 16px;
   }
-  
+
   .achievements-title {
     font-size: 32px;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .stat-card {
     max-width: 280px;
     margin: 0 auto;
