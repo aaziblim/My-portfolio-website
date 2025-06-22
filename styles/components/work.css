@@ -44,8 +44,6 @@
   overflow: hidden;
 }
 
-
-
 .work_project:not(:last-child) {
   margin-bottom: 5rem;
 }
@@ -64,7 +62,7 @@
 
 .work_project-btn {
   font-size: var(--size-sm);
-  margin: 1rem auto;  
+  margin: 1rem auto;
 }
 
 .work_project-subtitle {
@@ -75,13 +73,15 @@
 .work_hr {
   border-color: var(--clr-rose);
   margin: 2rem auto;
-  background: linear-gradient(to left, 
-            rgba(255, 218, 68, 0) 0%,
-            rgba(255, 218, 68, 0.8) 50%,
-            rgba(255, 218, 68, 0) 100%);
+  background: linear-gradient(
+    to left,
+    rgba(68, 255, 68, 0) 0%,
+    #a3e536 50%,
+    rgba(99, 255, 68, 0) 100%
+  );
 }
 
-.work_img{
+.work_img {
   border-radius: 20px;
 }
 
@@ -290,9 +290,6 @@
   }
 }
 
-
-
-
 .work_item {
   position: relative;
   display: flex;
@@ -366,20 +363,19 @@
   background-color: var(--clr-rose);
 }
 
-
-
-
- /* Glowing Line Styles */
- .vertical-line {
+/* Glowing Line Styles */
+.vertical-line {
   position: absolute;
-  left:-20px;
+  left: -20px;
   top: 0;
   height: 100%;
   width: 2px;
-  background: linear-gradient(to bottom, 
-            rgba(255, 218, 68, 0) 0%,
-            rgba(255, 218, 68, 0.8) 50%,
-            rgba(255, 218, 68, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(152, 255, 68, 0) 0%,
+    #a3e536 50%,
+    #a3e536 100%
+  );
   z-index: 1;
 }
 
@@ -392,9 +388,8 @@
   background-color: var(--clr-accent);
   border-radius: 50%;
   transform: translateX(-4px);
-  box-shadow: 0 0 15px 5px rgba(255, 218, 68, 0.5);
+  box-shadow: 0 0 15px 5px #a3e536;
   z-index: 2;
-  
 }
 .dot-top {
   top: 300px;
@@ -407,8 +402,6 @@
 .dot-bottom {
   top: 1700px;
 }
-
-
 
 .bottom-line {
   position: absolute;
@@ -426,9 +419,11 @@
   left: 0;
   height: 2px;
   width: 100%;
-  background: linear-gradient(90deg, 
-            rgba(255, 218, 68, 0.8) 0%,
-            rgba(255, 218, 68, 0.1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 218, 68, 0.8) 0%,
+    rgba(255, 218, 68, 0.1) 100%
+  );
   transform-origin: left bottom;
   transform: rotate(-5deg) translateY(50px);
 }
@@ -443,28 +438,29 @@
   opacity: 0.3;
 }
 
-
 .horizontal-line {
   position: absolute;
   top: 300px; /* same as the glowing-dot or where you want it to start */
   left: 40px; /* match the vertical line's left */
   width: 150px; /* change as needed */
   height: 2px;
-  background: linear-gradient(to right, 
-    rgba(255, 218, 68, 0.8), 
-    rgba(255, 218, 68, 0.1));
+  background: linear-gradient(
+    to right,
+    rgba(152, 255, 68, 0.8),
+    rgba(255, 218, 68, 0.1)
+  );
   box-shadow: 0 0 10px rgba(255, 218, 68, 0.5);
   z-index: 1;
 }
 .horizontal-end-dot {
   position: absolute;
-  top: 296px; 
-  left: 190px; 
+  top: 296px;
+  left: 190px;
   width: 10px;
   height: 10px;
-  background-color: #ffda44;
+  background-color: #a3e536;
   border-radius: 50%;
-  box-shadow: 0 0 10px 4px rgba(255, 218, 68, 0.5);
+  box-shadow: 0 0 10px 4px #a3e536;
   z-index: 2;
 }
 
