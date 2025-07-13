@@ -1,11 +1,14 @@
 .about {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   position: relative;
   z-index: 1;
   padding: 2rem;
   border-radius: 20px;
+  margin-left: 2rem;
 
   background: radial-gradient(
     circle at center,
@@ -24,7 +27,6 @@
   flex-direction: column;
   gap: 1rem;
 } */
-
 
 .about_content {
   display: flex;
@@ -84,27 +86,24 @@
   /* Gradient border with animation */
 
   box-shadow: 0 2px 2px rgba(225, 205, 29, 0.5),
-  0 3px 3px rgba(225, 222, 29, 0.5), 0 0 40px -20px var(--clr-rose);
+    0 3px 3px rgba(225, 222, 29, 0.5), 0 0 40px -20px var(--clr-rose);
   transition: 0.3s ease;
-  background: linear-gradient(45deg, var(--clr-indigo), #8b5cf6, #ec4899) border-box;
+  background: linear-gradient(45deg, var(--clr-indigo), #8b5cf6, #ec4899)
+    border-box;
   position: relative;
   overflow: hidden;
 }
 
 /* Glow effect with animation */
 .about_image::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 20px;
   padding: 2px;
   background: linear-gradient(45deg, var(--clr-indigo), #8b5cf6, #ec4899);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   animation: glow 2s infinite alternate;
@@ -156,7 +155,6 @@
   }
 }
 
-
 /* xs */
 @media (min-width: 475px) {
   .about {
@@ -188,9 +186,6 @@
     height: 250;
   }
 }
-
-
-
 
 /* sm */
 @media (min-width: 640px) {
@@ -285,4 +280,3 @@
     width: 30.75rem;
   }
 } */
-

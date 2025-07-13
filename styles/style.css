@@ -57,6 +57,7 @@ h2::after {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .light-mode {
   --clr-light: #070a13;
@@ -71,6 +72,7 @@ body {
   font-family: "General Sans", sans-serif;
   background-color: var(--clr-dark);
   color: var(--clr-light);
+  overflow-x: hidden;
 }
 
 img,
@@ -268,6 +270,17 @@ body::-webkit-scrollbar-thumb {
 
   .stat-card {
     max-width: 280px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 639px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .stat-card {
+    width: 100%;
+    max-width: 350px;
     margin: 0 auto;
   }
 }
