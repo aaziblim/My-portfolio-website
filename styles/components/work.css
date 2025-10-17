@@ -304,7 +304,7 @@
   .work_item {
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
   }
 
   .work_item:nth-child(even) {
@@ -315,13 +315,17 @@
 .work_image-wrapper {
   flex: 1;
   max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .work_image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
   display: block;
+  object-fit: cover;
 }
 
 /* Content section */

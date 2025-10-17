@@ -1,23 +1,35 @@
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
   position: relative;
   z-index: 1;
-  padding: 2rem;
-  border-radius: 20px;
-  margin-left: 2rem;
-
   background: radial-gradient(
     circle at center,
     rgba(139, 92, 246, 0.08),
     rgba(236, 72, 153, 0.06),
     transparent 30%
   );
-
   overflow: hidden;
+}
+
+.about .section-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 75rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+/* helper: center section content and provide consistent side padding */
+.section-inner {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1rem; /* mobile default */
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* keeps content centered on large screens */
 }
 
 /* old about */
@@ -31,7 +43,10 @@
 .about_content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about_title {
@@ -77,21 +92,20 @@
   display: flex;
 }
 .about_image {
-  display: flex;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 3/4;
   border-radius: 20px;
-  height: 650px;
-  margin-right: 22rem;
   object-fit: cover;
   transition: all 0.3s ease;
-  /* Gradient border with animation */
-
   box-shadow: 0 2px 2px rgba(225, 205, 29, 0.5),
     0 3px 3px rgba(225, 222, 29, 0.5), 0 0 40px -20px var(--clr-rose);
-  transition: 0.3s ease;
   background: linear-gradient(45deg, var(--clr-indigo), #8b5cf6, #ec4899)
     border-box;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 /* Glow effect with animation */
@@ -152,6 +166,24 @@
 @media (min-width: 768px) {
   .tech_item {
     font-size: var(--size-base);
+  }
+}
+
+/* Mobile-specific improvements for toolkit */
+@media (max-width: 767px) {
+  .about_toolkit {
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .tech_item {
+    padding: 0.6rem 0.9rem; /* slightly bigger tap targets */
+    font-size: var(--size-base); /* increase to readable mobile size */
+  }
+
+  .about_subtitle {
+    text-align: center;
   }
 }
 
@@ -252,6 +284,42 @@
   .about_image {
     width: 30.75rem;
     margin-right: 10rem;
+  }
+}
+
+/* apply section-inner padding to about-specific wrapper if present */
+.about, .about_content, .about_image-wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .about, .about_content, .about_image-wrapper { padding-left: 2rem; padding-right: 2rem; }
+}
+
+@media (min-width: 1024px) {
+  .section-inner {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .about .section-inner {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .about_content {
+    text-align: left;
+  }
+
+  .about_image {
+    max-width: 450px;
+    margin: 0;
+  }
+
+  .about_toolkit {
+    justify-content: flex-start;
   }
 }
 

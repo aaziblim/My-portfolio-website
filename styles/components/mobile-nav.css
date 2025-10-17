@@ -48,6 +48,42 @@
   color: var(--clr-slate600);
 }
 
+.header__bars {
+  color: var(--clr-light);
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+  display: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+
+.header__bars i {
+  font-size: var(--size-xl);
+}
+
+@media (max-width: 639px) {
+  .header__bars {
+    display: block;
+  }
+  
+  .header__menu {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .header__bars {
+    display: none;
+  }
+}
+
 .mobile-nav__btn {
   font-size: var(--size-sm);
 }

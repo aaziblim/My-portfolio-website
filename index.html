@@ -24,12 +24,16 @@
   <body id="home">
     <header class="header">
       <nav>
+        
         <a
           class="header__resume btn3 scrolled"
           href="https://drive.google.com/file/d/1blrVd37AQohuRFdfJIIKDcH7X0CJ22S8/view?usp=sharing"
           target="_blank"
           >Resume</a
         >
+        <button class="header__bars">
+          <i class="fas fa-bars"></i>
+        </button>
         <ul class="header__menu">
           <li>
             <a class="header__link" href="#about" style="--link-index: 1"
@@ -75,14 +79,7 @@
             viewBox="0 0 24 24"
             fill="currentColor"
           >
-            <path
-              fill-rule="evenodd"
-              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </nav>
+        
     </header>
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
@@ -120,47 +117,51 @@
           </li>
 
           <li>
-            <a class="mobile-nav__btn btn" href="#">Resume</a>
-          </li>
-          <li>
             <a class="mobile-nav__link btn scrolled" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
     <!-- End of mobile Navigation -->
-    <main>
-      <section data-aos="zoom-in" class="hero container">
-        <img class="hero_img" src="/profilepic.jpg" alt="" />
-        <h2 class="hero_subtitle typing-text">Hi, <span></span></h2>
-        <h1 class="hero_title">a Python <br />developer.</h1>
-        <p class="hero_description">
-          I specialize in backend development using <strong>Python</strong> and
-          have experience with frameworks such as
-          <strong>Django, Flask, and FastAPI</strong>. My skill set also
-          includes <strong>DevOps</strong> practices like
-          <strong
-            >CI/CD automation, containerization (Docker), and cloud deployments
-            on AWS</strong
-          >. I enjoy building scalable web applications and delivering
-          efficient, reliable solutions.
-        </p>
-        <a class="hero_btn btn1" href="/form.html" target="_blank"
-          >Reach Out to me ↠</a
-        >
-      </section>
+    <main class="main-wrapper">
+      <div class="section-inner">
+        <section data-aos="zoom-in" class="hero container">
+          <img class="hero_img" src="/profilepic.jpg" alt="" />
+          <h2 class="hero_subtitle typing-text">Hi, <span></span></h2>
+          <h1 class="hero_title">a full stack <br />developer</h1>
+          <p class="hero_description">
+            I specialize in <strong>full-stack development</strong> using <strong>Python</strong>, 
+  with expertise in backend frameworks such as <strong>Django</strong>, <strong>Flask</strong>, 
+  and <strong>FastAPI</strong>, as well as frontend technologies like 
+  <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+</p>
+
+<p class="hero_description">
+  My skill set also includes <strong>DevOps practices</strong> such as 
+  <strong>CI/CD automation</strong>, <strong>containerization (Docker)</strong>, 
+  and <strong>cloud deployments on AWS</strong>.
+</p>
+
+<p class="hero_description">
+ I’m currently expanding my full-stack skills by building a project with <strong>Next.js</strong> to strengthen my frontend development expertise and modern web app experience.
+</p>
+          <a class="hero_btn btn1" href="/form.html" target="_blank"
+            >Reach Out to me ↠</a
+          >
+        </section>
+      </div>
 
       <!-- About section -->
-
-      <section data-aos="fade-up" id="about" class="about container section">
-        <div class="about_content">
-          <h2 class="about_title">About</h2>
-          <p class="about_description">
-            Hello there! I'm Abdu-Aziz, a Python backend developer specializing
-            in Flask, FastAPI, and Django. I wake up, grab a cup of tea
-            (sometimes Lipton with ginger!), open my laptop, and build scalable,
-            efficient, and robust backend systems all day, every day.
-          </p>
+      <section data-aos="fade-up" id="about" class="about section">
+        <div class="section-inner">
+          <div class="about_content">
+            <h2 class="about_title">About</h2>
+            <p class="about_description">
+              Hello there! I'm Abdu-Aziz, a Python backend developer specializing
+              in Flask, FastAPI, and Django. I wake up, grab a cup of tea
+              (sometimes Lipton with ginger!), open my laptop, and build scalable,
+              efficient, and robust backend systems all day, every day.
+            </p>
           <p class="about_description">
             Beyond backend development, I have a strong ML background, having
             worked on data-driven projects, model deployment, and API
@@ -195,15 +196,17 @@
           />
         </div>
       </section>
-      <section class="featured container section">
-        <h3 data-aos="fade-up" class="featured_subtitle">featured Project</h3>
-
-        <div data-aos="fade-up" class="featured_wrapper">
-          <h2 class="featured_title">Blog page web app</h2>
-          <a
-            href="https://my-project-latest.onrender.com"
-            class="featured_link"
-          >
+      <div class="section-inner">
+        <section class="featured container section">
+          <div class="featured_content">
+            <div class="featured_header">
+              <h3 data-aos="fade-up" class="featured_subtitle">Featured Project</h3>
+            <div data-aos="fade-up" class="featured_wrapper">
+              <h2 class="featured_title">Blog page web app</h2>
+              <a
+                href="https://my-project-latest.onrender.com"
+                class="featured_link"
+              >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -217,65 +220,62 @@
                 d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
               />
             </svg>
-          </a>
-        </div>
-        <p data-aos="fade-up" class="featured_description">
-          A full-featured social media and blogging platform built with Django,
-          offering a smooth user experience with key interactive features and
-          third-party authentication.
-        </p>
+              </a>
+            </div>
+            <p data-aos="fade-up" class="featured_description">
+             A full-featured social media and blogging platform built with Django, featuring a clean, responsive user experience, interactive social features, and third-party authentication. The entire application is containerized with Docker for seamless deployment and scalability
+            </p>
+             <a class="btn1 work_project-btn" href="#">View project →</a>
+          </div>
 
-        <h3 class="featured_label">Key Features</h3>
-
-        <ul class="featured_info-list" data-aos="fade-up">
-          <li class="featured_info">User registration, login, and logout</li>
-          <li class="featured_info">Google and GitHub OAuth sign-in</li>
-          <li class="featured_info">Create, edit, and delete posts</li>
-          <li class="featured_info">
-            Like and unlike posts with dynamic updates
-          </li>
-          <li class="featured_info">
-            View personalized feed with scrollable posts
-          </li>
-          <li class="featured_info">Edit user profile information</li>
-        </ul>
-
-        <div class="featured_info-container">
-          <div>
-            <h3 data-aos="fade-up" class="featured_label">Tech Stack</h3>
-            <ul
-              data-aos="fade-up"
-              class="featured_info-list featured_tech-stack"
-            >
-              <li class="featured_info">Django</li>
-              <li class="featured_info">Flask</li>
-              <li class="featured_info">FastApi</li>
-              <li class="featured_info">PostgreSQL</li>
-              <li class="featured_info">SQL</li>
-              <li class="featured_info">Docker</li>
+          <div class="featured_features">
+            <h3 class="featured_label">Key Features</h3>
+            <ul class="featured_bullet-list" data-aos="fade-up">
+              <li>User registration, login, and logout</li>
+              <li>Google and GitHub OAuth sign-in</li>
+              <li>Create, edit, and delete posts</li>
+              <li>Like and unlike posts with dynamic updates</li>
+              <li>View personalized feed with scrollable posts</li>
+              <li>Edit user profile information</li>
             </ul>
           </div>
-          <div>
-            <h3 data-aos="fade-up" class="featured_label">Project type</h3>
-            <p data-aos="fade-up" class="featured_info">
-              Backend & Cloud Development
-            </p>
-            <p data-aos="fade-up" class="featured_info">
-              Machine Learning & API Integration
-            </p>
-          </div>
-          <div>
-            <h3 data-aos="fade-up" class="featured_label">Timeline</h3>
-            <p data-aos="fade-up" class="featured_info">2024 - Present</p>
+
+          <div class="featured_info-container">
+            <div class="featured_tech">
+              <h3 data-aos="fade-up" class="featured_label">Tech Stack</h3>
+              <ul class="featured_bullet-list" data-aos="fade-up">
+                <li>Django</li>
+                <li>Flask</li>
+                <li>FastApi</li>
+                <li>PostgreSQL</li>
+                <li>SQL</li>
+                <li>Docker</li>
+              </ul>
+            </div>
+            <div class="featured_details">
+              <div class="featured_type">
+                <h3 data-aos="fade-up" class="featured_label">Project Type</h3>
+                <ul class="featured_bullet-list" data-aos="fade-up">
+                  <li>Backend & Cloud Development</li>
+                  <li>Machine Learning & API Integration</li>
+                </ul>
+              </div>
+              <div class="featured_timeline">
+                <h3 data-aos="fade-up" class="featured_label">Timeline</h3>
+                <ul class="featured_bullet-list" data-aos="fade-up">
+                  <li>2024 - Present</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="feature_image-container">
           <div data-aos="fade-right" class="featured_image-wrapper">
             <img
-              data-src="/homepage.png"
-              src="https://fakeimg.pl/1669x911"
-              class="work_img loading"
-              alt=""
+              src="/homepage.png"
+              class="featured_img"
+              alt="Homepage screenshot"
+              style="display:block;width:100%;height:auto;object-fit:cover;"
             />
           </div>
           <div data-aos="fade-up" class="featured_image-wrapper">
@@ -427,10 +427,7 @@
             <p class="work_project-description2">
               Within this site, you’ll find a curated collection of my
               projects—from web apps and automation tools to machine learning
-              demos. Each project section is structured to tell a story: what it
-              does, how it was built, and why it matters. Whether you’re a
-              recruiter, collaborator, or just curious, this portfolio is my
-              personal hub to demonstrate what I’ve built and what I’m capable
+              demos. Each project section is structured to tell a story.
               of.
             </p>
             <a class="btn1 work_project-btn" href="#">Website →</a>
